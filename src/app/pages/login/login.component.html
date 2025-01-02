@@ -1,0 +1,38 @@
+<div class="login-container w-full h-full items-center pt-20 flex flex-col">
+
+    <h1 class="w-full text-center text-4xl font-bold text-black">Log in to your account</h1>
+
+    <span class="mt-4 mb-8 text-white">Or
+        <span class="text-customColor-rightBackground underline cursor-pointer">create a free account</span>
+    </span>
+
+
+    <div class="poll-card w-2/3 p-10 flex flex-col gap-y-6 top-higlighted-box border border-gray-200 rounded-lg 
+    shadow">
+    <div class="input-section flex flex-col gap-2">
+        <label class="text-black font-medium text-lg">Email</label>
+        <input formControlName="email" type="email" class="input" placeholder="Email">
+    </div>
+
+    <div class="input-section flex flex-col gap-2">
+        <label class="text-black font-medium text-lg">Password</label>
+        <input formControlName="password" type="password" class="input" placeholder="Password">
+    </div>
+
+    <div class="footer-section w-full flex-col gap-y-4">
+        <button (click)="handleSignInWithEmail()" class="btn w-full">Login</button>
+
+        <div class="w-full flex justify-center items-center before:flex-1 
+            before:h-[2px] before:bg-customColor-boxBorder after:flex-1 after:h-[2px] after:bg-customColor-boxBorder">
+                <span class="px-3 text-black">Or</span>
+        </div>
+
+        <button (click)="handleSignInWithGoogle()" class="btn w-full flex gap-x-2 justify-center text-customColor-dark01
+            bg-transparent border-2 border-solid border-customColor-dark01
+        "> 
+        <fa-icon [size]="'lg'" [icon]="faGoogle"></fa-icon>
+        Sign with Google</button>
+    </div>
+    </div>
+
+</div>

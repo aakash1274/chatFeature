@@ -1,0 +1,9 @@
+<div class="search-input-container flex gap-x-2 bg-customColor-bubbleBackground
+    py-4 px-5 rounded-lg w-full">
+    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7608 2.65817C17.0429 2.65817 21.3394 6.95467 21.3394 12.2368C21.3394 14.7288 20.3831 17.0018 18.818 18.7076L21.8975 21.7806C22.1857 22.0688 22.1867 22.5351 21.8985 22.8233C21.7549 22.9689 21.5651 23.0407 21.3762 23.0407C21.1883 23.0407 20.9995 22.9689 20.8549 22.8253L17.7382 19.7173C16.0987 21.0303 14.0199 21.8164 11.7608 21.8164C6.47873 21.8164 2.18124 17.5189 2.18124 12.2368C2.18124 6.95467 6.47873 2.65817 11.7608 2.65817ZM11.7608 4.13362C7.29219 4.13362 3.65669 7.76813 3.65669 12.2368C3.65669 16.7054 7.29219 20.3409 11.7608 20.3409C16.2285 20.3409 19.864 16.7054 19.864 12.2368C19.864 7.76813 16.2285 4.13362 11.7608 4.13362Z" fill="#9393C1"/>
+    </svg>
+
+    <input type="text" (keyup)="handleSearch($event)" class="flex-1 bg-transparent outline-none border-none text-base" 
+    placeholder="Search or start a new start" />
+</div>

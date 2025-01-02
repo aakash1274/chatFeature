@@ -1,0 +1,52 @@
+<div class="chat-container flex">
+    <div class="user-chat-container bg-customColor-sideBackground h-screen w-1/4 p-6 flex 
+    flex-col gap-y-10">
+    <div class="search-filter-container flex flex-col gap-y-6">
+        <app-search-input (search)="handleSearch($event)"></app-search-input>
+
+    </div>
+    <div class="users-container flex flex-1 flex-col gap-y-6">
+        @for (item of userChats; track $index) {
+            <app-user-chat-card [config]="item"></app-user-chat-card>
+        }
+    </div>
+
+    <button (click)="authService.logoutUser()" class="btn w-full">Log out</button>
+    </div>
+
+    @if(senderUser){
+        <div class="chat-details-section h-[100vh] overflow-hidden
+            bg-customColor-greyish flex-1 flex flex-col">
+
+            <div class="profile-header bg-customColor-greyish px-8 flex py-4 gap-x-3">
+                <img class="image" [src]="senderUser.profile" alt="sender profile image" />
+                <div class="content-section flex flex-col">
+                    @if(senderUser.fullName){
+                        <span class="text-customColor-dark01 font-bold text-2xl">{{senderUser.fullName}}</span>
+                    } 
+                </div>
+            </div>
+
+            <div class="messages-container flex-1 bg-customColor-greyish overflow-y-scroll">
+                <div class="message-list h-full flex flex-col gap-y-2 p-10">
+                    @for (item of chats; track $index) {
+                        <app-chat-bubble [config]="item"></app-chat-bubble>
+                    } 
+                </div>
+            </div>
+            
+
+            <div class="input-text-section bg-customColor-bubbleBackground flex mx-6 px-4 py-5 gap-x-8
+            rounded-lg my-5 items-center
+            ">
+                <input [formControl]="messageControl" type="text" placeholder="Say something.." class="bg-transparent flex-1 px-4 outline-none"/>
+            <div (click)="addMessage()">
+                <svg  viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24"><title>send</title><path fill="currentColor" d="M1.101,21.757L23.8,12.028L1.101,2.3l0.011,7.912l13.623,1.816L1.112,13.845 L1.101,21.757z"></path></svg>
+            </div>
+            </div>
+
+        </div>
+    }
+
+    
+</div>
