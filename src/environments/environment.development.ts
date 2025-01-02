@@ -1,12 +1,12 @@
 export const environment = {
     firebaseConfig:
     {
-        "apiKey": "AIzaSyDbhE0zYV3Gn-QdDKWZPiw5hd5avKuxAPI",
-        "authDomain": "chat-b9431.firebaseapp.com",
-        "projectId": "chat-b9431",
-        "storageBucket": "chat-b9431.firebasestorage.app",
-        "messagingSenderId": "716914957082",
-        "appId": "1:716914957082:web:04a6a8e48a043b1a1e2aa3",
-        "measurementId": "G-BLB8VX2HDK"
+       "apiKey": "AIzaSyAWBhQFF11Y5x-505SSHgOZXyGmZEVhhG0",
+  "authDomain": "kissanconnect-627bf.firebaseapp.com",
+  "projectId": "kissanconnect-627bf",
+  "storageBucket": "kissanconnect-627bf.firebasestorage.app",
+  "messagingSenderId": "475931527381",
+  "appId": "1:475931527381:web:ea19691046002334657a5c",
+  "measurementId": "G-WYQ440YSF5"
     }
 };
